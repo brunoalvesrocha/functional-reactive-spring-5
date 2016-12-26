@@ -82,7 +82,7 @@ class SimpleDataCRL implements CommandLineRunner {
 
 	@Override
 	public void run(String... strings) throws Exception {
-		Stream.of("Bruno Rocha", "Marli de Fatima", "Melina")
+		Stream.of("Usuario1", "Usuario2", "Usuario3", "Usuario4")
 				.forEach(name -> personRepository.save(new Person(name, new Random().nextInt(100))));
 
 		personRepository.all().forEach(System.out::println);
